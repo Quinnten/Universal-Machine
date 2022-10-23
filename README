@@ -1,0 +1,81 @@
+/**********************************************************
+* HW1 UM
+* Comp 40
+* README
+* Quinnten Silveira-Charbonnier and Haijun Si
+***********************************************************
+ 
+
+
+                          ---Acknowledgements---
+Big shout out to all the TA's out there who helped. There were too many to 
+count
+I'd like to thank Megan for being a great professor 
+I'd like to Hansen for all those data structure. God bless. 
+I'd like to thank all the hardworking men and women who build the Cummings 
+center. If I'm gonna suffer, it could at least be in a nice place. 
+
+                    --- What works and what faults ---
+There are no segfaults are valgrind errors. This is a clean machine. 
+                                
+                                
+                            ---Departures---
+There have been no significant departures. Our end design quite closely 
+resembles the one in our design document. 
+
+                            ---Architecture---
+Our UM is broken down into two main part, the registers which are represented 
+as a Registers struct which holds a UArray, and memory which is represented 
+by a Memory struct which holds a sequence of UArrays, where each UArray is a 
+segment in memory, and a sequence of reusable segment IDs. They both directly
+interact with each other, especially on mapping, unmapping, segment store, 
+segment load, and load program instructions. However independently, the 
+registers don't know what's in memory and the memory doesn't know what's in 
+the registers. 
+                                
+                         ---Time to run program---
+Using CPU limited, we found that Midmark runs in 8 seconds, meaning that it 
+takes around 1 second to run a little over 10 million instructions. 
+
+Using the same test, we found that it takes around 195 seconds to run the 
+2.1 billion instructions in SANDmark. Which means it 1 second, the program 
+executed a little under 11 million instructions. 
+
+Using both if these measurements, it's safe to assume it takes around 
+5 seconds for our design to run a program of 50 million instructions. 
+
+
+                              ---Unit_Tests---
+build_halt_test: 
+
+
+build_verbose_halt_test:
+
+
+build_add_test:
+ 
+
+build_printing_digit_test
+
+
+build_mul_test:
+
+
+build_div_test:
+
+
+build_cmov_test:
+
+
+build_nand_test:
+
+
+build_seg_load_test:
+
+
+build_seg_store_test:
+                                ---Time---
+Time spent analyzing assignment:  About 6-7 hours 
+Time spent analyzing design:      About 10 
+Time spent working on assignment: About 15
+Total time spent:                 About 32 hours 
